@@ -4,9 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stk-workspace-toolkit"
-version = "0.1.0"
-description = "Portable workspace structure and setup utilities for STK/Python studies"
+version = "0.2.0"
+description = "Portable STK workspace setup, preservation inventories, and analytical transfer budgets"
 requires-python = ">=3.10"
+# Setup, preservation and analytical budgets use the standard library.
+# The licensed STK API is supplied separately; never vendor its distribution.
 dependencies = []
 
 [tool.setuptools.packages.find]

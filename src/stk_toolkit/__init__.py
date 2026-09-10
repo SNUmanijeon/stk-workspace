@@ -1,3 +1,3 @@
-"""Workspace setup utilities; STK mission methods are not yet migrated."""
+"""STK workspace setup, preservation and explicit-input analytical utilities."""
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

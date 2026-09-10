@@ -1,25 +1,50 @@
-# Starter validation
+# Validation evidence
 
-Checked on 2026-09-10 using Python 3.12.14 on Windows.
+## Release 0.2.0
 
-## Completed
+Checked on Windows with Python 3.12.14. The shared suite has 22 tests:
+20 pass and two symbolic-link creation tests skip because the account lacks
+that capability. The separate Windows junction non-traversal test passes.
 
-- Automated tests: 9 passed; 1 skipped because the environment did not allow test symlink creation. The skipped check is explicitly not claimed as verified.
-- Installer preview left a nonexistent target unchanged.
-- Installation into a fresh directory with spaces succeeded.
-- Setup succeeded from a different current working directory.
-- Repeated bootstrap preserved existing settings, notes, and local workspace-map content.
-- A new named local project was created; collisions, invalid names, reserved Windows names, and a file blocking the sandbox were rejected.
-- Differing destination files and parent-path conflicts stopped installation before any copying.
-- Current-root bootstrap and structural preflight passed; no missing required paths.
-- Git ignore checks confirmed that local scenarios, existing STK Config files, legacy OTV scenarios, and loose legacy scripts are excluded from the shared set.
+Analytical checks cover signed raising/lowering transfers, an independent
+vis-viva reference, Kepler scaling, an explicit zero-transfer convention,
+a 60-digit decimal reference for a small radius change, rocket-equation mass
+accounting, sequential burns, invalid inputs and insufficient propellant.
 
-## Runtime limits
+A local comparison extracted only three pure functions from the legacy source
+AST, without importing its mission driver. Across six transfer cases and ten
+burn budgets, delta-v agreed within 1e-12 relative / 1e-12 m/s absolute,
+coast time within 1e-14 relative, and duration within 1e-12 relative /
+1e-10 s absolute; final mass matched. Raw source identities, hashes and private
+comparison records remain in the local audit.
 
-The local workspace now uses the official STK 13.1 Python API from the installed distribution in an ignored runtime cache. API import preflight passed. A separate hidden STK Desktop instance loaded the retained relocated scenario successfully and was shut down without saving or propagating. The original regular files were checksum-verified after relocation; detailed results remain in the ignored local audit. Fresh clones still require their own STK installation, license, and API configuration.
+Preservation tests cover exact relocation, changed/added content, empty
+directory removal, exclusion mismatch, AST inspection without execution,
+CLI execution outside the checkout and output-placement safeguards. A native
+Windows junction to an external dependency directory was recorded without
+traversing or modifying its target.
 
-The relocation check establishes file preservation and scenario loading, not a new numerical validation. No propagator, engine, location, complete example, or dynamics algorithm has been promoted into shared assets or scientifically revalidated by this cleanup.
+Setup, scaffold, installer conflict detection and repeated-bootstrap
+preservation tests also pass. Release validation includes a clean local clone,
+bootstrap and preflight, package installation/import from outside the checkout,
+representative analytical/inventory workflows, template lookup, and a
+manifest-only distribution ZIP with checksums.
+
+## Scope and runtime limits
+
+These are file-structure and analytical reference checks, not mission-dynamics
+validation. The shared additions do not call STK. Native STK objects, example
+scenarios, custom propagators, engines and populated artifact templates have
+not been promoted by this release.
+
+STK availability, scenario selection, relocation checks and cleanup completion
+are specific to each workspace. Read that workspace's ignored map/audit;
+successful runtime/load checks from an earlier checkout do not establish them
+for a new one. Fresh clones require their own licensed STK installation and
+local API configuration for STK-specific work.
 
 ## Distribution
 
-The starter manifest enumerates shared files only. The ZIP includes SHA256SUMS.txt for its source payloads. Legacy scenarios, local projects, installed dependencies, and Git metadata are not part of that payload.
+The starter manifest enumerates reviewed shared files only. Its ZIP includes
+SHA256SUMS.txt for source payloads. Local scenarios, mission outputs, settings,
+audit records, dependency distributions and Git metadata are excluded.

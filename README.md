@@ -2,7 +2,7 @@
 
 A reusable STK/Python workspace with shared code, reference assets, and artifact templates in Git, and local mission projects under ignored `scenarios/`.
 
-**Current release: 0.1.0, workspace starter.** Setup and project-creation utilities are implemented. Mission algorithms, STK objects, raw/reference scenarios, and finished plot/presentation templates have not been migrated into this starter. The retained local scenario is stored under ignored scenarios/. Other legacy root content is removed from this workspace and is not part of the shared starter.
+**Current release: 0.2.0.** Includes setup/project-creation utilities, file-preservation inventories, and explicit-input two-body transfer/ideal rocket budgets. Native STK objects, reference scenarios and finished artifact templates remain unmigrated. Local preservation and cleanup status belongs in each checkout's ignored scenarios/WORKSPACE_MAP.md.
 
 ## Quick start
 
@@ -24,6 +24,13 @@ PowerShell wrapper with an explicit interpreter:
 Bootstrap creates the local sandbox, local workspace map, and `settings/local.json` without replacing existing content. It does not install Python, STK, an STK license, or third-party libraries. The Python setup tools use only the standard library. An editable package installation is optional: `python -m pip install -e .`.
 
 For STK import diagnostics, set `stk_api_dir` in `settings/local.json` if the API is not installed in the chosen interpreter, then run `python tools/preflight.py --require-stk`. This does not connect to a running STK session or prove license/numerical readiness.
+
+The analytical and inventory tools also use only the standard library:
+
+    python scripts/hohmann_budget.py --mu-m3-s2 1 --departure-radius-m 1 --arrival-radius-m 4
+    python scripts/inventory_local.py scenarios/my_mission --output scenarios/before.json
+
+See [reusable methods](docs/REUSABLE_METHODS.md) for units, assumptions, provenance, relocation verification and validation limits. The synthetic budget example is not mission data.
 
 ## Folder map
 
