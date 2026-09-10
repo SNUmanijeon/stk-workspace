@@ -11,3 +11,5 @@ Read `docs/STK_WORKFLOW.md` and the relevant entries in `docs/CATALOG.md` before
 - Read `templates/README.md` before adding or using an artifact template. Record its ID/version in the run manifest. Write its rendered output under the local scenario, not back into the template folder.
 - Preserve existing work during setup and migration. Read `docs/MIGRATION_PLAN.md` before relocating legacy material. Update the catalog when a shared method or asset is added or superseded.
 - Follow the user's explicit instructions when they change these defaults. Do not infer permission to publish local mission data from a request to publish the reusable toolkit.
+
+For adopting another existing workspace, read `docs/ADOPT_EXISTING_WORKSPACE.md`. For reusable improvements from any workspace, follow `docs/CONTRIBUTING.md`; update this same repository while keeping local scenario content out of Git.

@@ -90,6 +90,8 @@ The first command previews. Apply adds missing files, accepts identical files, a
 
 ## Git, migration, and templates
 
+- [Adopt another existing workspace](docs/ADOPT_EXISTING_WORKSPACE.md)
+- [Contribute reusable material](docs/CONTRIBUTING.md)
 - [GitHub setup](docs/GITHUB_SETUP.md)
 - [Migration status and next steps](docs/MIGRATION_PLAN.md)
 - [Reusable planning prompt](STK_WORKSPACE_MIGRATION_PROMPT.md)
