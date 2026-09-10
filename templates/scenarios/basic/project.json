@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "name": "{{SCENARIO_NAME}}",
+  "baseline": null,
+  "units": {},
+  "reference_frame": null,
+  "time_system": null,
+  "parameters": {},
+  "status": "unconfigured",
+  "scaffold_template": {"id": "scenario-basic", "version": "1.0.0"}
+}

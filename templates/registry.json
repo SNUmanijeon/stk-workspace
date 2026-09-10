@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "templates": [
+    {
+      "id": "scenario-basic",
+      "version": "1.0.0",
+      "type": "scenario-scaffold",
+      "path": "scenarios/basic",
+      "status": "ready",
+      "inputs": ["scenario_name"],
+      "command": "python tools/new_scenario.py SCENARIO_NAME"
+    }
+  ]
+}

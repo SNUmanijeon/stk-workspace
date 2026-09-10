@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "stk_version": "13",
+  "stk_api_dir": "",
+  "python_executable": "",
+  "notes": "Fill installation-dependent values in ignored settings/local.json. No mission numerical defaults are supplied."
+}

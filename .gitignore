@@ -1,0 +1,33 @@
+# Only reviewed root-level toolkit paths are shared. Legacy STK content stays local.
+/*
+!/.gitignore
+!/.gitattributes
+!/AGENTS.md
+!/README.md
+!/pyproject.toml
+!/starter_manifest.json
+!/STK_WORKSPACE_MIGRATION_PROMPT.md
+!/STK_WORKSPACE_SETUP.md
+!/docs/
+!/src/
+!/assets/
+!/settings/
+!/scripts/
+!/examples/
+!/templates/
+!/tools/
+!/tests/
+
+# Root local projects are never tracked, including their scripts and reports.
+/scenarios/
+/settings/local.json
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example
+~$*
