@@ -2,7 +2,7 @@
 
 A reusable STK/Python workspace with shared code, reference assets, and artifact templates in Git, and local mission projects under ignored `scenarios/`.
 
-**Current release: 0.2.0.** Includes setup/project-creation utilities, file-preservation inventories, and explicit-input two-body transfer/ideal rocket budgets. Native STK objects, reference scenarios and finished artifact templates remain unmigrated. Local preservation and cleanup status belongs in each checkout's ignored scenarios/WORKSPACE_MAP.md.
+**Current release: 0.2.1.** Includes setup/project-creation utilities, file-preservation inventories, explicit-input two-body transfer/ideal rocket budgets, and native 80 N / 160 N engine models with Isp 295 s. Other native assets, reference scenarios and finished artifact templates remain unmigrated. Local preservation and cleanup status belongs in each checkout's ignored scenarios/WORKSPACE_MAP.md.
 
 ## Quick start
 
@@ -32,6 +32,8 @@ The analytical and inventory tools also use only the standard library:
 
 See [reusable methods](docs/REUSABLE_METHODS.md) for units, assumptions, provenance, relocation verification and validation limits. The synthetic budget example is not mission data.
 
+See [shared engine models](assets/engine_models/README.md) for **IGT Engine** (80 N, 295 s), the legacy 160 N model, and optional STK import/readback verification.
+
 ## Folder map
 
 ```text
@@ -46,7 +48,7 @@ STK/                              # Project root and Git root
     locations/                    # Koonibba, Naro, CONTEC Jeju/Sweden
     area_targets/                 # W3 TRA and future areas
     propagators/                  # Reentry Space Prop and future models
-    engine_models/                # Reentry Constant Thrust and Isp
+    engine_models/                # IGT Engine (80 N), Reentry Constant Thrust and Isp (160 N)
     sequences/
   settings/                       # Toolkit settings, separate from STK Config/
   scripts/                        # Representative analysis runners

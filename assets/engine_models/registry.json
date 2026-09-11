@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "igt-engine",
+      "version": "1.0.0",
+      "display_name": "IGT Engine",
+      "serialized_name": "IGT_Engine",
+      "component_identifier": "{751E9AA3-F113-4ED2-9B4B-4CBFF87EAE1A}",
+      "type": "EngineModel",
+      "specific_type": "EngineConstant",
+      "path": "igt_engine/IGT_Engine.EngineModel",
+      "thrust_n": 80,
+      "isp_s": 295.0,
+      "standard_gravity_m_s2": 9.80665,
+      "sha256": "7833caf66f65cfcdb8d470e93bfa6b3c19cfea0633ac62a9296ec14704c8348d",
+      "source_sha256": "043d8b202d3b8611dbc88a276545d47082e2659fc52b12e134e4eefa4fe276cc",
+      "validated_with": "STK Engine 13.1.0",
+      "external_component_dependencies": []
+    },
+    {
+      "id": "reentry-constant-thrust-and-isp",
+      "version": "1.0.0",
+      "display_name": "Reentry Constant Thrust and Isp",
+      "serialized_name": "Reentry_Constant_Thrust_and_Isp",
+      "component_identifier": "{414E28D5-05F2-409A-9690-CB1600DE6BB6}",
+      "type": "EngineModel",
+      "specific_type": "EngineConstant",
+      "path": "reentry_constant_thrust_and_isp/Reentry_Constant_Thrust_and_Isp.EngineModel",
+      "thrust_n": 160,
+      "isp_s": 295.0,
+      "standard_gravity_m_s2": 9.80665,
+      "sha256": "57dfdb02968eabe06221267cf261c98a666de630ccc79ffa9e282c7321988ed5",
+      "source_sha256": "c2c700a039b0664e7bf3521e027e3302a504a2af4c417c7e5c7e5891465d4302",
+      "validated_with": "STK Engine 13.1.0",
+      "external_component_dependencies": []
+    }
+  ]
+}

@@ -1,3 +1,10 @@
 # Shared STK assets
 
-These directories reserve destinations for reviewed exports and definitions. No STK assets have been migrated in this starter. Preserve exact STK object/component names, dependencies, source provenance, and validation evidence when adding material. Use one authoritative definition for each asset.
+Two self-contained Astrogator engine models are available in
+[engine_models](engine_models/README.md): IGT Engine (80 N) and
+Reentry Constant Thrust and Isp (160 N), both at Isp 295 s.
+Their source/export identities, dependencies and validation are documented.
+
+Other asset categories remain placeholders. Preserve exact STK component names,
+dependencies, source provenance and validation evidence when adding material.
+Create local working copies for any mutating analysis.

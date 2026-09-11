@@ -1,5 +1,26 @@
 # Validation evidence
 
+## Release 0.2.1 engine assets
+
+The native engine exports are IGT Engine (80 N, 295 s) and Reentry Constant
+Thrust and Isp (160 N, 295 s). Both use 9.80665 m/s^2 for the Isp conversion.
+STK 13.1 exported the reviewed definitions; native duplication gave IGT Engine
+a distinct identifier. Native verification loads copied assets into an empty
+owned Engine scenario, in both import orders, then re-reads both names and
+physical values. No mission scenario is loaded, saved or propagated.
+
+The suite has 23 tests: 21 pass and the same two symbolic-link creation tests
+skip. Engine tests check XML types, exact serialized names, SI units, distinct
+component identifiers, file hashes and manifest inclusion. Clean-checkout
+validation confirms portable asset lookup, native loading and distribution
+checksums. The 127 original local engine component files remain byte-identical;
+that private inventory is excluded from Git.
+
+These checks establish configuration and load compatibility, not flight
+performance or trajectory accuracy. No artifact template or third-party
+Python dependency is added. The optional native verifier requires a separately
+supplied licensed STK 13 installation/API.
+
 ## Release 0.2.0
 
 Checked on Windows with Python 3.12.14. The shared suite has 22 tests:
@@ -33,9 +54,9 @@ manifest-only distribution ZIP with checksums.
 ## Scope and runtime limits
 
 These are file-structure and analytical reference checks, not mission-dynamics
-validation. The shared additions do not call STK. Native STK objects, example
-scenarios, custom propagators, engines and populated artifact templates have
-not been promoted by this release.
+validation. The analytical and inventory helpers do not call STK. Release
+0.2.1 adds an optional native engine verifier. Other native objects, example
+scenarios, custom propagators and populated artifact templates remain unmigrated.
 
 STK availability, scenario selection, relocation checks and cleanup completion
 are specific to each workspace. Read that workspace's ignored map/audit;

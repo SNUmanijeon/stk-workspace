@@ -12,10 +12,10 @@ config/, stk/, scripts/ and output/ layout. Consult the local map for exact path
 
 ## Remaining model migration
 
-Shared assets and example categories still contain documentation placeholders.
+Two constant-thrust engine assets are now shared: IGT Engine (80 N) and the legacy 160 N model, both at Isp 295 s. Other assets and example categories still contain documentation placeholders.
 Version 0.2.0 adds standard-library analytical transfer/rocket helpers and
 preservation inventories; see [reusable methods](REUSABLE_METHODS.md).
-Specialized mission solvers and native components remain local. Before
+Specialized mission solvers and remaining native components remain local. Before
 populating assets/examples, inspect retained sources, establish provenance and
 dependencies, import reviewed components or complete scenarios without altering
 serialized names, validate a local working copy, and update the catalog,
