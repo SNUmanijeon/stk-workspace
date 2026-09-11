@@ -1,0 +1,10 @@
+set title 'Roll angle'
+set xlabel 'Time [ms]'
+set ylabel '{/Symbol f} [\260]' 
+set xrange [:11.6]
+set yrange [-3:3]
+
+set key right bottom
+
+plot 'M105_AOA5/sixDoFRigidBodyState_tot_15ms.dat' u ($1*1e3):8 w l ls 1 title '{/Symbol a}_{0}    5{\260}',\
+'M105_AOA10/sixDoFRigidBodyState_tot.dat' u ($1*1e3-0.395):8 w l ls 2 title '{/Symbol a}_{0}  10{\260}',\
